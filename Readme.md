@@ -1,3 +1,4 @@
+rabota vipolnena studentom kurnosov25pt1
 Simple project for study makefiles
 =====================
 
