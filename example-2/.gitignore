@@ -1,2 +1,14 @@
 hello
 hello-dbg
+*.o
+*.swp
+*.swo
+*.swm
+*
+*.log
+core
+build/
+dist/
+*.d
+*.gcno
+*.gcda
