@@ -6,19 +6,19 @@ RELEASE_FLAGS = -O2 -Wall -DNDEBUG
 DEBUG_FLAGS   = -g -O0 -Wall
 RELEASE_EXEC  = hello
 DEBUG_EXEC    = hello-dbg
-#SOURCE        =
+SOURCE        = hello.cpp
 
 all: debug release
 
 debug: $(DEBUG_EXEC)
 
 $(DEBUG_EXEC): hello.cpp
-	g++ $(DEBUG_FLAGS) hello.cpp -o $(DEBUG_EXEC) 
+	g++ $(DEBUG_FLAGS) $(SOURCE) -o $(DEBUG_EXEC) #Используем переменную SOURCE 
 
 release: $(RELEASE_EXEC)
 
 $(RELEASE_EXEC): hello.cpp
-	g++ $(RELEASE_FLAGS) hello.cpp -o $(RELEASE_EXEC)
+	g++ $(RELEASE_FLAGS) $(SOURCE) -o $(RELEASE_EXEC) #Используем переменную SOURCE 
 
 clean:
 	rm -f $(RELEASE_EXEC) $(DEBUG_EXEC)
